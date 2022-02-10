@@ -12,17 +12,17 @@ public class Main {
     public static void main(String[] args) throws FieldIsNull, IOException, NoSuchFieldException, IllegalAccessException {
 
 //        Add phones with some parameters
-        MobilePhone nokia = new MobilePhone("Nokia", 1250, new Display(100, 100));
-        Smartphone iphone = new Smartphone("iPhone", 15000, new Display(500, 500));
-        SimplePhone phone1 = new SimplePhone("Panasonic", 200);
+        MobilePhone nokia = new MobilePhone("Nokia", 1250, 50505050, "black", new Display(100, 100));
+        Smartphone iphone = new Smartphone("iPhone", 15000, 45678955, "white", new Display(500, 500));
+        SimplePhone phone1 = new SimplePhone("Panasonic", 200, "blue");
 
 //        Create list of all my phones to work with lambda
         List<Phone> listPhones = new ArrayList<>();
         listPhones.add(nokia);
         listPhones.add(iphone);
         listPhones.add(phone1);
-        listPhones.add(new Smartphone("LG", 10500, new Display(300, 300)));
-        listPhones.add(new MobilePhone("Siemens", 500, new Display(100, 100)));
+        listPhones.add(new Smartphone("LG", 10500, 14905050, "red", new Display(300, 300)));
+        listPhones.add(new MobilePhone("Siemens", 500, 98871150, "red", new Display(100, 100)));
 
 //        List of my phones which cost more than 1000 uah (use lambda)
         listPhones.stream().filter(p -> p.getPrice()>=1000)
@@ -102,7 +102,7 @@ public class Main {
         osSmartphone.close();
 
 //        Use reflections example
-        Smartphone smartphone = new Smartphone("Motorola", 1000, new Display(300, 300));
+        Smartphone smartphone = new Smartphone("Motorola", 1000, 44442242, "black", new Display(300, 300));
         Class<Smartphone> cl = Smartphone.class;
         System.out.println(cl.getName());
         System.out.println(cl.getSuperclass().getName());

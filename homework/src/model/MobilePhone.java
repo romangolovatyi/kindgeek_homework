@@ -18,21 +18,27 @@ public class MobilePhone extends Phone implements ChargingPhone, Runnable {
         this.mobilePhoneCases = new ArrayList<>();
     }
 
-    public MobilePhone(String model, Display display) {
+    public MobilePhone(String model, long imeiCode, String color, Display display) {
         setModel(model);
+        setImeiCode(imeiCode);
+        setColor(color);
         this.display = display;
         this.mobilePhoneCases = new ArrayList<>();
     }
 
-    public MobilePhone(int price, Display display) {
+    public MobilePhone(int price, long imeiCode, String color, Display display) {
         setPrice(price);
+        setImeiCode(imeiCode);
+        setColor(color);
         this.display = display;
         this.mobilePhoneCases = new ArrayList<>();
     }
 
-    public MobilePhone(String model, int price, Display display) {
+    public MobilePhone(String model, int price, long imeiCode, String color, Display display) {
         setModel(model);
         setPrice(price);
+        setImeiCode(imeiCode);
+        setColor(color);
         this.display = display;
         this.mobilePhoneCases = new ArrayList<>();
     }

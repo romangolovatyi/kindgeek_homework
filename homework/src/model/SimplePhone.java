@@ -9,9 +9,10 @@ public class SimplePhone extends Phone implements ChargingPhone, Runnable {
     public SimplePhone() {
     }
     
-    public SimplePhone(String model, int price) {
+    public SimplePhone(String model, int price, String color) {
         setModel(model);
         setPrice(price);
+        setColor(color);
     }
 
     public void turnOnSimplePhone(){

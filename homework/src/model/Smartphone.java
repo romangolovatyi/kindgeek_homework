@@ -18,15 +18,19 @@ public class Smartphone extends Phone implements SmartphoneFunctions, Localizati
     public Smartphone() {
     }
 
-    public Smartphone(String model, Display display) {
+    public Smartphone(String model, long imeiCode, String color, Display display) {
         setModel(model);
+        setImeiCode(imeiCode);
+        setColor(color);
         this.display = display;
         this.smartphoneCases = new ArrayList<>();
     }
 
-    public Smartphone(String model, int price, Display display) {
+    public Smartphone(String model, int price, long imeiCode, String color, Display display) {
         setModel(model);
         setPrice(price);
+        setImeiCode(imeiCode);
+        setColor(color);
         this.display = display;
         this.smartphoneCases = new ArrayList<>();
     }

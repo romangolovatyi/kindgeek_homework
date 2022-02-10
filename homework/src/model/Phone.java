@@ -9,6 +9,8 @@ public abstract class Phone {
 
     private String model;
     private int price;
+    private long imeiCode;
+    private String color;
 
     public abstract void call();
 
@@ -53,4 +55,19 @@ public abstract class Phone {
         this.price = price;
     }
 
+    public long getImeiCode() {
+        return imeiCode;
+    }
+
+    public void setImeiCode(long imeiCode) {
+        this.imeiCode = imeiCode;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 }
